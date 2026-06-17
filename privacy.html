@@ -90,7 +90,8 @@
         <li><strong>Account information</strong> &mdash; email address and optional display name when you sign up.</li>
         <li><strong>Inventory data</strong> &mdash; items, quantities, storage locations, consumption and waste logs, categories, allergens, and nutrition preferences you enter.</li>
         <li><strong>Household data</strong> &mdash; household name, address (if you provide it), member roles, and managed dependent profiles.</li>
-        <li><strong>Photos</strong> &mdash; optional item photos you choose to upload.</li>
+        <li><strong>Camera (optional)</strong> &mdash; used only for barcode scanning and on-device text recognition (nutrition labels, receipts). Images are processed on your device and are not uploaded to our servers in version 1.0.</li>
+        <li><strong>Product images</strong> &mdash; when you scan a barcode, we may display a product thumbnail URL from Open Food Facts; we do not store that image on our servers.</li>
         <li><strong>Push notifications</strong> &mdash; device tokens so we can send reminder notifications you enable.</li>
         <li><strong>Health data (optional)</strong> &mdash; if you opt in, nutrition information from logged consumption may be written to Apple Health or Health Connect on your device.</li>
         <li><strong>Location (optional)</strong> &mdash; used only to help set your household address when you choose to use that feature.</li>
@@ -101,8 +102,7 @@
       <h2>How we use information</h2>
       <p>
         We use this data to provide inventory tracking, household sharing, reports, reminders,
-        and optional health export. We do not sell your personal information. Version 1.0 does
-        not show ads.
+        and optional health export. We do not sell your personal information.
       </p>
     </section>
 
@@ -110,14 +110,14 @@
       <h2>Where data is stored</h2>
       <ul>
         <li><strong>Local-only mode</strong> &mdash; data is stored on your device. Your operating system may include app data in device backups (for example iCloud Backup or Android Auto Backup).</li>
-        <li><strong>Cloud accounts</strong> &mdash; data is stored in Google Firebase (Firestore and Cloud Storage) in access-controlled databases. Authentication is handled by Firebase Auth.</li>
+        <li><strong>Cloud accounts</strong> &mdash; data is stored in Google Firebase (Firestore) in access-controlled databases. Authentication is handled by Firebase Auth. Version 1.0 does not upload user photos to Firebase Cloud Storage.</li>
       </ul>
     </section>
 
     <section>
       <h2>Third-party services</h2>
       <ul>
-        <li><strong>Google Firebase</strong> &mdash; authentication, cloud database, file storage, push notifications, and cloud functions.</li>
+        <li><strong>Google Firebase</strong> &mdash; authentication, cloud database, push notifications, and cloud functions.</li>
         <li><strong>Open Food Facts</strong> &mdash; barcode product lookups. We send barcode numbers to look up product information; we do not send your inventory lists.</li>
       </ul>
     </section>
