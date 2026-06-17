@@ -10,7 +10,11 @@ After Pages is enabled:
 
 **https://irishedev.github.io/larderia-legal/privacy.html**
 
-Use that URL in App Store Connect, Google Play Console, and the in-app Settings link.
+Account deletion request page (Google Play / in-app Settings):
+
+**https://irishedev.github.io/larderia-legal/delete-account.html**
+
+Use those URLs in App Store Connect, Google Play Console, and the in-app Settings links.
 
 ## One-time setup
 
