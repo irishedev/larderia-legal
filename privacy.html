@@ -115,9 +115,21 @@
     </section>
 
     <section>
+      <h2>Crash and diagnostics</h2>
+      <p>
+        In release builds we use <strong>Google Firebase Crashlytics</strong> to collect
+        crash reports and limited diagnostic events (for example sync or push registration
+        failures). Reports may include your Firebase account id, app version, device type,
+        and locale. We do not include inventory contents, household names, email addresses,
+        or notification tokens in these reports. Crash collection is disabled while you run
+        a debug build from Xcode or Android Studio.
+      </p>
+    </section>
+
+    <section>
       <h2>Third-party services</h2>
       <ul>
-        <li><strong>Google Firebase</strong> &mdash; authentication, cloud database, push notifications, and cloud functions.</li>
+        <li><strong>Google Firebase</strong> &mdash; authentication, cloud database, push notifications, cloud functions, and crash/diagnostics reporting.</li>
         <li><strong>Open Food Facts</strong> &mdash; barcode product lookups. We send barcode numbers to look up product information; we do not send your inventory lists.</li>
       </ul>
     </section>
