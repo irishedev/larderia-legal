@@ -45,7 +45,24 @@
     .updated {
       color: var(--muted);
       font-size: 0.95rem;
-      margin-bottom: 2rem;
+      margin-bottom: 1.25rem;
+    }
+    .lang-switch {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem 0.65rem;
+      margin-bottom: 1.75rem;
+      font-size: 0.85rem;
+    }
+    .lang-switch a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .lang-switch a:hover { color: var(--accent); text-decoration: underline; }
+    .lang-switch a[aria-current="page"] {
+      color: var(--accent);
+      font-weight: 600;
+      text-decoration: none;
     }
     section {
       background: var(--card);
@@ -59,140 +76,74 @@
       margin: 0 0 0.65rem;
       color: var(--accent);
     }
-    p, ul { margin: 0 0 0.75rem; }
-    ul { padding-left: 1.25rem; }
+    p, ul, ol { margin: 0 0 0.75rem; }
+    ul, ol { padding-left: 1.25rem; }
     li { margin-bottom: 0.35rem; }
     a { color: var(--accent); }
-    p:last-child, ul:last-child { margin-bottom: 0; }
+    p:last-child, ul:last-child, ol:last-child { margin-bottom: 0; }
+
   </style>
 </head>
 <body>
   <main>
     <h1>Larderia Privacy Policy</h1>
-    <p class="updated">Last updated: June 18, 2026</p>
+    <p class="updated">Last updated: June 21, 2026</p>
+    <nav class="lang-switch" aria-label="Languages">
+      <a href="privacy.html" hreflang="en" aria-current="page">English</a>
+      <a href="privacy-de.html" hreflang="de">Deutsch</a>
+      <a href="privacy-es.html" hreflang="es">Español</a>
+      <a href="privacy-fr.html" hreflang="fr">Français</a>
+      <a href="privacy-ja.html" hreflang="ja">日本語</a>
+      <a href="privacy-ko.html" hreflang="ko">한국어</a>
+      <a href="privacy-pt.html" hreflang="pt">Português</a>
+      <a href="privacy-zh.html" hreflang="zh">简体中文</a>
+      <a href="privacy-zh-Hant.html" hreflang="zh-Hant">繁體中文</a>
+    </nav>
 
     <section>
       <h2>Overview</h2>
-      <p>
-        Cairn Studio (&ldquo;we&rdquo;, &ldquo;us&rdquo;) operates the Larderia mobile app.
-        Larderia helps households track food inventory. You may use the app without an account
-        (data stays on your device) or create an account to sync data across devices and share
-        with a household.
-      </p>
-      <p>
-        Contact: <a href="mailto:support@cairn-studio.com">support@cairn-studio.com</a>
-      </p>
+      <p>Cairn Studio (&ldquo;we&rdquo;, &ldquo;us&rdquo;) operates the Larderia mobile app. Larderia helps households track food inventory. You may use the app without an account (data stays on your device) or create an account to sync data across devices and share with a household.</p>
+      <p>Contact: <a href="mailto:support@cairn-studio.com">support@cairn-studio.com</a></p>
     </section>
-
     <section>
       <h2>Information we collect</h2>
-      <ul>
-        <li><strong>Account information</strong> &mdash; email address and optional display name when you sign up.</li>
-        <li><strong>Inventory data</strong> &mdash; items, quantities, storage locations, consumption and waste logs, categories, allergens, and nutrition preferences you enter.</li>
-        <li><strong>Household data</strong> &mdash; household name, address (if you provide it), member roles, and managed dependent profiles.</li>
-        <li><strong>Camera (optional)</strong> &mdash; used only for barcode scanning and on-device text recognition (nutrition labels, receipts). Images are processed on your device and are not uploaded to our servers in version 1.0.</li>
-        <li><strong>Product images</strong> &mdash; when you scan a barcode, we may display a product thumbnail URL from Open Food Facts; we do not store that image on our servers.</li>
-        <li><strong>Push notifications</strong> &mdash; device tokens so we can send reminder notifications you enable.</li>
-        <li><strong>Health data (optional)</strong> &mdash; if you opt in, nutrition information from logged consumption may be written to Apple Health or Health Connect on your device.</li>
-        <li><strong>Location (optional)</strong> &mdash; used only to help set your household address when you choose to use that feature.</li>
-      </ul>
+      <ul><li><strong>Account information</strong> &mdash; email address and optional display name when you sign up.</li><li><strong>Inventory data</strong> &mdash; items, quantities, storage locations, consumption and waste logs, categories, allergens, and nutrition preferences you enter.</li><li><strong>Household data</strong> &mdash; household name, address (if you provide it), member roles, and managed dependent profiles.</li><li><strong>Camera (optional)</strong> &mdash; used only for barcode scanning and on-device text recognition (nutrition labels, receipts). Images are processed on your device and are not uploaded to our servers in version 1.0.</li><li><strong>Product images</strong> &mdash; when you scan a barcode, we may display a product thumbnail URL from Open Food Facts; we do not store that image on our servers.</li><li><strong>Push notifications</strong> &mdash; device tokens so we can send reminder notifications you enable.</li><li><strong>Health data (optional)</strong> &mdash; if you opt in, nutrition information from logged consumption may be written to Apple Health or Health Connect on your device.</li><li><strong>Location (optional)</strong> &mdash; used only to help set your household address when you choose to use that feature.</li></ul>
     </section>
-
     <section>
       <h2>How we use information</h2>
-      <p>
-        We use this data to provide inventory tracking, household sharing, reports, reminders,
-        and optional health export. We do not sell your personal information.
-      </p>
+      <p>We use this data to provide inventory tracking, household sharing, reports, reminders, and optional health export. We do not sell your personal information.</p>
     </section>
-
     <section>
       <h2>Where data is stored</h2>
-      <ul>
-        <li><strong>Local-only mode</strong> &mdash; data is stored on your device. Your operating system may include app data in device backups (for example iCloud Backup or Android Auto Backup).</li>
-        <li><strong>Cloud accounts</strong> &mdash; data is stored in Google Firebase (Firestore) in access-controlled databases. Authentication is handled by Firebase Auth. Version 1.0 does not upload user photos to Firebase Cloud Storage.</li>
-      </ul>
+      <ul><li><strong>Local-only mode</strong> &mdash; data is stored on your device. Your operating system may include app data in device backups (for example iCloud Backup or Android Auto Backup).</li><li><strong>Cloud accounts</strong> &mdash; data is stored in Google Firebase (Firestore) in access-controlled databases. Authentication is handled by Firebase Auth. Version 1.0 does not upload user photos to Firebase Cloud Storage.</li></ul>
     </section>
-
     <section>
       <h2>Crash, diagnostics, performance, and analytics</h2>
-      <p>
-        In release builds we use <strong>Google Firebase Crashlytics</strong> to collect
-        crash reports and limited diagnostic events (for example sync or push registration
-        failures). Reports may include your Firebase account id, app version, device type,
-        and locale. We do not include inventory contents, household names, email addresses,
-        or notification tokens in these reports. Crash collection is disabled while you run
-        a debug build from Xcode or Android Studio.
-      </p>
-      <p>
-        We also use <strong>Google Firebase Performance Monitoring</strong> to measure app
-        startup time and the duration of selected operations (for example sync queue replay).
-        Performance data may include device type, app version, and coarse timing metrics.
-        It does not include inventory contents or personal identifiers beyond your Firebase
-        account id. Performance collection is disabled in debug builds.
-      </p>
-      <p>
-        When you are signed in to a cloud account (not in local-only mode), we use
-        <strong>Google Firebase Analytics</strong> in release builds to understand how the
-        app is used — for example which main screens you open and when you sign in, sign up,
-        sign out, or delete your account. Analytics may include your Firebase account id,
-        app version, device type, locale, and coarse interaction events. We do not send
-        inventory contents, household names, email addresses, item names, or barcode numbers
-        to Analytics. Analytics collection is disabled in debug builds and when you use
-        the app without a cloud account.
-      </p>
+      <p>In release builds we use <strong>Google Firebase Crashlytics</strong> to collect crash reports and limited diagnostic events (for example sync or push registration failures). Reports may include your Firebase account id, app version, device type, and locale. We do not include inventory contents, household names, email addresses, or notification tokens in these reports. Crash collection is disabled while you run a debug build from Xcode or Android Studio.</p>
+      <p>We also use <strong>Google Firebase Performance Monitoring</strong> to measure app startup time and the duration of selected operations (for example sync queue replay). Performance data may include device type, app version, and coarse timing metrics. It does not include inventory contents or personal identifiers beyond your Firebase account id. Performance collection is disabled in debug builds.</p>
+      <p>When you are signed in to a cloud account (not in local-only mode), we use <strong>Google Firebase Analytics</strong> in release builds to understand how the app is used &mdash; for example which main screens you open and when you sign in, sign up, sign out, or delete your account. Analytics may include your Firebase account id, app version, device type, locale, and coarse interaction events. We do not send inventory contents, household names, email addresses, item names, or barcode numbers to Analytics. Analytics collection is disabled in debug builds and when you use the app without a cloud account.</p>
     </section>
-
     <section>
       <h2>Third-party services</h2>
-      <ul>
-        <li><strong>Google Firebase</strong> &mdash; authentication, cloud database, push notifications, cloud functions, crash/diagnostics reporting, performance monitoring, and usage analytics (when signed in to a cloud account).</li>
-        <li><strong>Open Food Facts</strong> &mdash; barcode product lookups. We send barcode numbers to look up product information; we do not send your inventory lists.</li>
-      </ul>
+      <ul><li><strong>Google Firebase</strong> &mdash; authentication, cloud database, push notifications, cloud functions, crash/diagnostics reporting, performance monitoring, and usage analytics (when signed in to a cloud account).</li><li><strong>Open Food Facts</strong> &mdash; barcode product lookups. We send barcode numbers to look up product information; we do not send your inventory lists.</li></ul>
     </section>
-
     <section>
       <h2>Data retention and deletion</h2>
-      <p>
-        We retain your data while your account is active. When not signed in to the cloud,
-        you may export local data from Settings.
-      </p>
-      <p>
-        Households you own are deleted for all members, who are notified. If you
-        belong to another household as a member or admin, you are removed and the
-        owner is notified.
-      </p>
-      <p>
-        To delete your cloud account and associated data, follow the steps on our
-        <a href="delete-account.html">account deletion request page</a>, use
-        <strong>Settings → Account → Delete account</strong> in the app, or email
-        <a href="mailto:support@cairn-studio.com">support@cairn-studio.com</a>
-        from your registered email address.
-      </p>
+      <p>We retain your data while your account is active. When not signed in to the cloud, you may export local data from Settings.</p>
+      <p>Households you own are deleted for all members, who are notified. If you belong to another household as a member or admin, you are removed and the owner is notified.</p>
+      <p>To delete your cloud account and associated data, follow the steps on our <a href="delete-account.html">account deletion request page</a>, use <strong>Settings &rarr; Account &rarr; Delete account</strong> in the app, or email <a href="mailto:support@cairn-studio.com">support@cairn-studio.com</a> from your registered email address.</p>
     </section>
-
     <section>
       <h2>Children&rsquo;s privacy</h2>
-      <p>
-        Larderia is not directed to children under 13. We do not knowingly collect personal
-        information from children under 13.
-      </p>
+      <p>Larderia is not directed to children under 13. We do not knowingly collect personal information from children under 13.</p>
     </section>
-
     <section>
       <h2>Changes</h2>
-      <p>
-        We may update this policy from time to time. The &ldquo;Last updated&rdquo; date at the
-        top of this page will change when we do.
-      </p>
+      <p>We may update this policy from time to time. The &ldquo;Last updated&rdquo; date at the top of this page will change when we do.</p>
     </section>
-
     <section>
       <h2>Contact</h2>
-      <p>
-        Questions about this policy:
-        <a href="mailto:support@cairn-studio.com">support@cairn-studio.com</a>
-      </p>
+      <p>Questions about this policy: <a href="mailto:support@cairn-studio.com">support@cairn-studio.com</a></p>
     </section>
   </main>
 </body>

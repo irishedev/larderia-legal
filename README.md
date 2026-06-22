@@ -1,39 +1,48 @@
 # larderia-legal
 
-Public legal pages for [Larderia](https://github.com/irishedev/inventory-app) (privacy policy, etc.).
+Public legal pages for [Larderia](https://github.com/irishedev/inventory-app) (privacy policy, account deletion).
 
 Hosted on **GitHub Pages** so the app repo can stay private.
 
-## Live URL
+## Live URLs
 
-After Pages is enabled:
+Canonical English (use in App Store Connect / Google Play Console):
 
-**https://irishedev.github.io/larderia-legal/privacy.html**
+- **Privacy:** https://irishedev.github.io/larderia-legal/privacy.html
+- **Account deletion:** https://irishedev.github.io/larderia-legal/delete-account.html
 
-Account deletion request page (Google Play / in-app Settings):
+Localized pages (linked from the in-app Settings footer by device/app language):
 
-**https://irishedev.github.io/larderia-legal/delete-account.html**
+| Locale | Privacy | Account deletion |
+|--------|---------|------------------|
+| English | `privacy.html` | `delete-account.html` |
+| Deutsch | `privacy-de.html` | `delete-account-de.html` |
+| Español | `privacy-es.html` | `delete-account-es.html` |
+| Français | `privacy-fr.html` | `delete-account-fr.html` |
+| 日本語 | `privacy-ja.html` | `delete-account-ja.html` |
+| 한국어 | `privacy-ko.html` | `delete-account-ko.html` |
+| Português | `privacy-pt.html` | `delete-account-pt.html` |
+| 简体中文 | `privacy-zh.html` | `delete-account-zh.html` |
+| 繁體中文 | `privacy-zh-Hant.html` | `delete-account-zh-Hant.html` |
 
-Use those URLs in App Store Connect, Google Play Console, and the in-app Settings links.
+Each page includes a language switcher linking all versions.
+
+## Updating content
+
+1. Edit translations in `legal_content.py` (or English sections only if a single-locale fix).
+2. Regenerate HTML:
+
+   ```bash
+   python3 generate_pages.py
+   ```
+
+3. Commit and push. No app release is required unless URL paths change.
+
+The app resolves locale-specific URLs in `inventory-app/lib/core/constants/app_urls.dart`.
 
 ## One-time setup
 
 1. Create a **public** repo named `larderia-legal` on GitHub (under `irishedev`).
-2. Push this folder:
-
-   ```bash
-   cd larderia-legal
-   git init
-   git add index.html privacy.html README.md
-   git commit -m "Add Larderia privacy policy for GitHub Pages"
-   git branch -M main
-   git remote add origin https://github.com/irishedev/larderia-legal.git
-   git push -u origin main
-   ```
-
+2. Push this folder.
 3. In the repo: **Settings → Pages →** source **Deploy from branch** → branch `main`, folder **`/ (root)`** → Save.
 4. Wait 1–2 minutes and open the live URL in a private browser window.
-
-## Updating the policy
-
-Edit `privacy.html`, bump the “Last updated” date, commit, and push. No app release is required unless the URL changes.
