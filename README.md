@@ -38,6 +38,10 @@ Each page includes a language switcher linking all versions.
 
 3. Commit and push. No app release is required unless URL paths change.
 
+English `privacy.html` and `delete-account.html` were updated **2026-09-26** for the
+local-only (no Firebase) product. Other locale HTML files still describe the old
+cloud account until they are regenerated from `legal_content.py`.
+
 The app resolves locale-specific URLs in `inventory-app/lib/core/constants/app_urls.dart`.
 
 ## One-time setup
