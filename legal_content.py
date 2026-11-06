@@ -37,7 +37,7 @@ PRIVACY_PAGES = {
                             "<strong>Product images</strong> &mdash; when you scan a barcode, we may display a product thumbnail URL from Open Food Facts; we do not store that image on our servers.",
                             "<strong>Push notifications</strong> &mdash; device tokens so we can send reminder notifications you enable.",
                             "<strong>Health data (optional)</strong> &mdash; if you opt in, nutrition information from logged consumption may be written to Apple Health or Health Connect on your device.",
-                            "<strong>Location (optional)</strong> &mdash; used only to help set your household address when you choose to use that feature.",
+                            "<strong>Location and address lookup (optional)</strong> &mdash; used only to help set your household address when you choose to use that feature. When you tap search or use your current location, the address text or your position is sent to your phone&rsquo;s built-in geocoding service (Apple on iPhone, Google on Android) to find matching addresses. We do not receive it.",
                         ],
                     },
                 ],
